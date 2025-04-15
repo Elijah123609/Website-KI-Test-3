@@ -54,85 +54,37 @@ nav .logo {
   color: #0077cc;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 /* Header */
-header {
-  background-color: #121212;
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-header p {
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
-header a {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #0077cc;
-  color: white;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-header a:hover {
-  background-color: #005fa3;
-}
-
-/* Abschnitte */
-section {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-section:nth-of-type(even) {
-  background-color: #ffffff;
-}
-
-section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-section p, section ul {
-  font-size: 18px;
-  color: #555;
-}
-
-/* Liste */
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  margin: 10px 0;
-}
-
-/* Kontakt-Link */
-section a {
-  color: #0077cc;
-  font-weight: bold;
-}
-
-/* Footer */
-footer {
-  background-color: #121212;
-  color: #bbb;
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 14px;
-}
-
 .hero {
   position: relative;
   background-image: url('header.jpg');
@@ -146,7 +98,7 @@ footer {
 }
 
 .hero .overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* dunkler Layer über dem Bild */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 40px;
   color: white;
   border-radius: 12px;
@@ -176,6 +128,62 @@ footer {
   background-color: #005fa3;
 }
 
+/* Sections */
+section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+section:nth-of-type(even) {
+  background-color: #ffffff;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Leistungen Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  width: 280px;
+  text-align: center;
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Kontakt */
 .kontakt-box {
   display: flex;
   flex-direction: column;
@@ -206,6 +214,16 @@ footer {
   cursor: not-allowed;
 }
 
+/* Footer */
+footer {
+  background-color: #121212;
+  color: #bbb;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+/* Scroll-to-top Button */
 #scrollTop {
   position: fixed;
   bottom: 30px;
