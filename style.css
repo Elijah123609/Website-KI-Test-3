@@ -20,3 +20,36 @@ header a {
   text-decoration: none;
   border-radius: 5px;
 }
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  color: #333;
+}
+
+section:nth-of-type(even) {
+  background-color: #e6f0ff; /* Heller Hintergrund für Abwechslung */
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
