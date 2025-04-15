@@ -12,6 +12,7 @@
   <nav>
     <div class="container">
       <h1 class="logo">DeinName</h1>
+      <button class="menu-toggle" aria-label="Menü öffnen">☰</button>
       <ul class="nav-links">
         <li><a href="#ueber-uns">Über uns</a></li>
         <li><a href="#leistungen">Leistungen</a></li>
@@ -22,12 +23,12 @@
 
   <!-- Header -->
   <header class="hero">
-  <div class="overlay">
-    <h1>Willkommen auf unserer Seite</h1>
-    <p>Wir gestalten digitale Erlebnisse, die beeindrucken.</p>
-    <a href="#kontakt">Jetzt Kontakt aufnehmen</a>
-  </div>
-</header>
+    <div class="overlay">
+      <h1>Willkommen auf unserer Seite</h1>
+      <p>Wir gestalten digitale Erlebnisse, die beeindrucken.</p>
+      <a href="#kontakt">Jetzt Kontakt aufnehmen</a>
+    </div>
+  </header>
 
   <!-- Über uns -->
   <section id="ueber-uns">
@@ -37,62 +38,67 @@
 
   <!-- Leistungen -->
   <section id="leistungen">
-  <h2>Unsere Leistungen</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/0077cc/code.png" alt="Webdesign Icon" />
-      <h3>Webdesign</h3>
-      <p>Moderne Webseiten, mobiloptimiert & schnell.</p>
+    <h2>Unsere Leistungen</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/0077cc/code.png" alt="Webdesign Icon" />
+        <h3>Webdesign</h3>
+        <p>Moderne Webseiten, mobiloptimiert & schnell.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/0077cc/seo.png" alt="SEO Icon" />
+        <h3>SEO</h3>
+        <p>Mehr Sichtbarkeit in Suchmaschinen mit gezielter Optimierung.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/0077cc/content.png" alt="Content Icon" />
+        <h3>Content-Erstellung</h3>
+        <p>Texte, Bilder und mehr – auf den Punkt und professionell.</p>
+      </div>
     </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/0077cc/seo.png" alt="SEO Icon" />
-      <h3>SEO</h3>
-      <p>Mehr Sichtbarkeit in Suchmaschinen mit gezielter Optimierung.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/0077cc/content.png" alt="Content Icon" />
-      <h3>Content-Erstellung</h3>
-      <p>Texte, Bilder und mehr – auf den Punkt und professionell.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Kontakt -->
   <section id="kontakt">
-  <h2>Kontakt</h2>
-  <div class="kontakt-box">
-    <input type="text" placeholder="Dein Name">
-    <input type="email" placeholder="Deine E-Mail">
-    <textarea rows="5" placeholder="Deine Nachricht"></textarea>
-    <button disabled>Nachricht senden (nicht aktiv)</button>
-  </div>
-</section>
+    <h2>Kontakt</h2>
+    <div class="kontakt-box">
+      <input type="text" placeholder="Dein Name">
+      <input type="email" placeholder="Deine E-Mail">
+      <textarea rows="5" placeholder="Deine Nachricht"></textarea>
+      <button disabled>Nachricht senden (nicht aktiv)</button>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 DeinName. Alle Rechte vorbehalten.</p>
   </footer>
 
+  <!-- Scroll-to-Top Button -->
+  <button id="scrollTop" title="Nach oben">↑</button>
+
+  <!-- JavaScript -->
+  <script>
+    // Scroll-to-top Button sichtbar machen
+    const scrollBtn = document.getElementById("scrollTop");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+    scrollBtn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // Responsives Menü anzeigen
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
 </body>
 </html>
-
-<section id="leistungen">
-  <h2>Unsere Leistungen</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/0077cc/code.png" alt="Webdesign Icon" />
-      <h3>Webdesign</h3>
-      <p>Moderne Webseiten, mobiloptimiert & schnell.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/0077cc/seo.png" alt="SEO Icon" />
-      <h3>SEO</h3>
-      <p>Mehr Sichtbarkeit in Suchmaschinen mit gezielter Optimierung.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/0077cc/content.png" alt="Content Icon" />
-      <h3>Content-Erstellung</h3>
-      <p>Texte, Bilder und mehr – auf den Punkt und professionell.</p>
-    </div>
-  </div>
-</section>
