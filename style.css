@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  background-color: #f5f7fa;
+  background-color: #f7f9fb;
   color: #333;
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -16,7 +16,7 @@ body {
 /* Navigation */
 nav {
   background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -46,42 +46,12 @@ nav .logo {
 .nav-links li a {
   text-decoration: none;
   color: #333;
-  font-weight: bold;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
   color: #0077cc;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: white;
-    width: 100%;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
 }
 
 /* Header */
@@ -99,9 +69,10 @@ nav .logo {
 
 .hero .overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px;
+  padding: 60px 30px;
   color: white;
-  border-radius: 12px;
+  border-radius: 16px;
+  max-width: 700px;
 }
 
 .hero h1 {
@@ -116,19 +87,20 @@ nav .logo {
 
 .hero a {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 14px 28px;
   background-color: #0077cc;
   color: white;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
 .hero a:hover {
   background-color: #005fa3;
 }
 
-/* Sections */
+/* Abschnitte */
 section {
   max-width: 960px;
   margin: 0 auto;
@@ -141,41 +113,49 @@ section:nth-of-type(even) {
 }
 
 section h2 {
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 20px;
+  color: #0077cc;
 }
 
-section p {
+section p, section ul {
   font-size: 18px;
   color: #555;
 }
 
-/* Leistungen Cards */
+/* Karten */
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
   margin-top: 40px;
 }
 
 .card {
-  background-color: #fff;
+  background-color: white;
   padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 280px;
   text-align: center;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
 .card img {
   width: 60px;
+  height: 60px;
   margin-bottom: 20px;
 }
 
 .card h3 {
   font-size: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .card p {
@@ -196,19 +176,19 @@ section p {
 .kontakt-box textarea {
   padding: 15px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 16px;
   width: 100%;
   background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .kontakt-box button {
   background-color: #ccc;
   color: #666;
-  padding: 12px;
+  padding: 14px;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 16px;
   font-weight: bold;
   cursor: not-allowed;
@@ -223,7 +203,7 @@ footer {
   font-size: 14px;
 }
 
-/* Scroll-to-top Button */
+/* Scroll to Top Button */
 #scrollTop {
   position: fixed;
   bottom: 30px;
@@ -243,17 +223,12 @@ footer {
   background-color: #005fa3;
 }
 
-/* ========== ANIMATIONEN ========== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
+/* Animationen */
+.fade-in,
 .fade-in-up {
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.7s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade-in.visible,
@@ -262,50 +237,18 @@ footer {
   transform: translateY(0);
 }
 
-/* ========== BUTTON VERBESSERT ========== */
-.hero a,
-.kontakt-box button {
-  box-shadow: 0 8px 20px rgba(0, 119, 204, 0.2);
-  transition: all 0.3s ease-in-out;
-  transform: scale(1);
-}
+/* Responsives Design */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.hero a:hover {
-  transform: scale(1.05);
-}
+  .hero h1 {
+    font-size: 36px;
+  }
 
-/* ========== CARD-HOVER-EFFEKT ========== */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-/* ========== MODERNERES FARBSCHEMA ========== */
-:root {
-  --primary: #0077cc;
-  --secondary: #005fa3;
-  --text: #333;
-  --bg-light: #f9fbfd;
-  --bg-dark: #121212;
-}
-
-body {
-  background-color: var(--bg-light);
-  color: var(--text);
-}
-
-/* ========== TYPOGRAFIE VERFEINERT ========== */
-h1, h2, h3 {
-  letter-spacing: -0.5px;
-}
-
-section p {
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.8;
-  color: #444;
+  .hero p {
+    font-size: 18px;
+  }
 }
