@@ -242,3 +242,70 @@ footer {
 #scrollTop:hover {
   background-color: #005fa3;
 }
+
+/* ========== ANIMATIONEN ========== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease-out;
+}
+
+.fade-in.visible,
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== BUTTON VERBESSERT ========== */
+.hero a,
+.kontakt-box button {
+  box-shadow: 0 8px 20px rgba(0, 119, 204, 0.2);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.hero a:hover {
+  transform: scale(1.05);
+}
+
+/* ========== CARD-HOVER-EFFEKT ========== */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== MODERNERES FARBSCHEMA ========== */
+:root {
+  --primary: #0077cc;
+  --secondary: #005fa3;
+  --text: #333;
+  --bg-light: #f9fbfd;
+  --bg-dark: #121212;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text);
+}
+
+/* ========== TYPOGRAFIE VERFEINERT ========== */
+h1, h2, h3 {
+  letter-spacing: -0.5px;
+}
+
+section p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #444;
+}
