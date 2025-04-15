@@ -205,3 +205,22 @@ footer {
   font-weight: bold;
   cursor: not-allowed;
 }
+
+#scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0077cc;
+  color: white;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
+
+#scrollTop:hover {
+  background-color: #005fa3;
+}
