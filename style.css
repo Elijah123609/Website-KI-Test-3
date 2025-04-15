@@ -417,4 +417,31 @@ section p, section ul {
 }
 
 .carousel-track {
-  display:
+  display: flex;
+  gap: 20px;
+  scroll-snap-align: start;
+  padding-bottom: 10px;
+}
+
+.carousel video {
+  width: 300px;
+  border-radius: 12px;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #121212;
+  color: white;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
