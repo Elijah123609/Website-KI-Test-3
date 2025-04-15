@@ -132,3 +132,46 @@ footer {
   padding: 40px 20px;
   font-size: 14px;
 }
+
+.hero {
+  position: relative;
+  background-image: url('header.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* dunkler Layer über dem Bild */
+  padding: 40px;
+  color: white;
+  border-radius: 12px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.hero a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0077cc;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero a:hover {
+  background-color: #005fa3;
+}
